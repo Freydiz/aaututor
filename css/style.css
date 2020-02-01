@@ -1,0 +1,809 @@
+@import 'modal.css';
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.sub-pages {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/AdobeStock_153977626.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    max-height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 60rem) {
+    .container {
+        width: 95%;
+        max-width: 80em;
+        margin: 0 auto;
+    }
+}
+
+.clearfix::after,
+section::after,
+footer::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* column system
+==============================*/
+
+[class*="col-"] {
+    width: 100%;
+    margin-top: 1em;
+}
+
+@media (min-width: 40rem) {
+
+    [class*="col-"] {
+        float: left;
+        padding: .5em;
+        text-align: center;
+    }
+
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    [class*="col-"] h3 {
+        padding: .25em;
+    }
+
+}
+
+/* typography
+==============================*/
+
+h1 {
+    font-weight: 300;
+    font-size: 1.7rem;
+}
+
+p {
+    margin-top: 0;
+    padding: .5em 1em .5em 1em;
+    line-height: 1.5;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    font-weight: 900;
+
+}
+
+.title span {
+    font-weight: 100;
+    display: block;
+    font-size: .85em;
+}
+
+@media screen and (min-width: 30rem) {
+
+    .title {
+        font-size: 2.75rem;
+        margin-top: 1em;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .title {
+        font-size: 3.7rem;
+        margin-top: 1em;
+    }
+}
+
+/* buttons
+==============================*/
+
+.button {
+    display: inline-block;
+    background: #f39d1a;
+    color: #FFF;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .5em 1.25em;
+}
+
+@media screen and (min-width: 30rem) {
+    .button {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    .button {
+        font-size: 2rem;
+    }
+}
+
+.button:hover,
+.button:focus {
+    background: transparent;
+    color: #f39d1a;
+    border: 2px solid #f39d1a;
+}
+
+.button-accent {
+    color: #f39d1a;
+    border-color: #f39d1a;
+}
+
+.button-accent:hover,
+.button-accent:focus {
+    background: #f39d1a;
+    color: #313F4C;
+}
+
+.button-signup {
+    color: #f39d1a;
+    border-color: #f39d1a;
+}
+
+.button-signup:hover,
+.button-signup:focus {
+    background: #f39d1a;
+    color: #313F4C;
+}
+
+.logout_button {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f39d1a;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.logout_button:hover,
+.logout_button:focus {
+    background: #313f4c;
+    padding: .55em;
+    transition: .5s;
+}
+
+.search-button {
+    padding: 1em;
+    width: 3em;
+    border: none;
+}
+
+.button-createsess {
+    font-size: 1.25rem;
+}
+
+.fa-plus-square {
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+@media screen and (min-width: 60rem) {
+    .button-createsess {
+        float: left;
+    }
+
+    .fa-plus-square {
+        font-size: 1.5rem;
+        vertical-align: middle;
+    }
+}
+
+
+
+
+/* header
+==============================*/
+
+.logo {
+    line-height: 3em;
+    position: fixed;
+    float: left;
+    margin: 1em 2em;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .2em;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.5em;
+}
+
+.highlight {
+    color: #F39D1A;
+}
+
+nav {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    line-height: 3em;
+}
+
+nav ul {
+    line-height: 3em;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 2em;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: #313F4C;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 1em 2em;
+    ;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background: #313f4c;
+    padding: .5em;
+    transition: .5s;
+}
+
+.menu-icon {
+    line-height: 3em;
+    width: 100%;
+    background: #313F4C;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 1em 2em;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+@media(max-width: 60rem) {
+
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 1em;
+    }
+
+    nav ul {
+        max-height: 0px;
+        background: #313F4C;
+    }
+
+    nav.black ul {
+        background: #313F4C;
+    }
+
+    .showing {
+        max-height: 34em;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 2em;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+}
+
+
+/* home-hero
+==============================*/
+
+.home-hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/AdobeStock_153977626.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+    padding: 6em 0;
+    text-align: center;
+    color: #FFF;
+}
+
+
+@media (min-width: 30rem) {
+    .home-hero {
+        padding-top: 18vh;
+    }
+}
+
+@media (min-width: 60rem) {
+    .home-hero {
+        padding-top: 12vh;
+    }
+}
+
+.home_hero_signup_button {
+    margin: 3em;
+}
+
+@media (min-width: 30rem) {
+    .home_hero_signup_button {
+        margin: 4em;
+    }
+}
+
+@media (min-width: 60rem) {
+    .home_hero_signup_button {
+        margin: 5em;
+    }
+}
+
+/* home-about
+==============================*/
+
+.home-about-textbox {
+    background-color: #313F4C;
+    padding: 3em;
+    width: 100vw;
+    outline: 2px solid #f39d1a;
+    outline-offset: -2em;
+    color: #FFF;
+    position: relative;
+}
+
+.home-about-textbox h1 {
+    font-size: 1.5rem;
+    color: #f39d1a;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -.3em;
+    background: #313F4C;
+    padding: 0 .145em;
+}
+
+@media (min-width: 30rem) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .home-about-textbox h1 {
+
+        padding: 0 .33em;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    .home-about {
+        background-image: url(../img/tutoring.jpg);
+        background-repeat: no-repeat;
+        padding-bottom: 20em;
+    }
+
+    .home-about-textbox {
+        width: 50%;
+        padding: 4.5em;
+        outline-offset: -2em;
+        margin-left: -2.5%;
+        top: -3em;
+        text-align: left;
+        box-shadow: 0 0 4em 0 rgba(0, 0, 0, .3);
+    }
+
+    .home-about-textbox h1 {
+
+        left: 6rem;
+        transform: translateX(0);
+    }
+}
+
+/* search box section
+==============================*/
+
+.content {
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.searchbox-title {
+    min-height: 40vh;
+    padding-top: 6em;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.searchbox-title h2 {
+    font-size: 1.25rem;
+}
+
+.wrap-frontpage {
+    width: 75%;
+    margin: 2.5em auto;
+}
+
+.wrap-subpage {
+    width: 75%;
+    margin: 2.5em auto;
+}
+
+.searchbox {
+    width: 100%;
+    display: inline;
+}
+
+.searchterm {
+    width: 75%;
+    height: 3em;
+    border: .3em solid #F39D1A;
+    padding: .75em;
+    font-size: .75rem;
+    outline: none;
+    transition: 1s all;
+}
+
+.searchterm:focus {
+    color: orange;
+    border: .3em solid #FFF;
+
+}
+
+.searchbtn {
+    width: 3em;
+    height: 3em;
+    border: .3em solid #F39D1A;
+    background-color: #F39D1A;
+    text-align: center;
+    color: #FFF;
+    cursor: pointer;
+    font-size: .75rem;
+}
+
+@media screen and (min-width: 30rem) {
+
+    .wrap-frontpage {
+        width: 60%;
+    }
+
+    .wrap-subpage {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .searchterm {
+        height: 3.75em;
+        font-size: 1rem;
+    }
+
+    .searchbtn {
+        width: 3.75em;
+        height: 3.75em;
+        font-size: 1rem;
+    }
+
+    .searchbox-title h2 {
+        font-size: 2rem;
+    }
+}
+
+
+.wrap-sessions {
+    width: 100%;
+    margin: 2.5em auto;
+}
+
+
+.dark {
+    max-width: 100vw;
+    min-height: 40vh;
+    padding: .5em;
+    background-color: #313F4C;
+    color: #FFF;
+    box-shadow: 0 0 4em 0 rgba(0, 0, 0, .3);
+}
+
+.dark h2 {
+    font-size: 1.25rem;
+}
+
+.dark h4 {
+    text-align: left;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 60rem) {
+    .dark {
+        margin: auto;
+        padding-top: 1.5em;
+        min-height: 50vh;
+        width: 65%;
+        box-shadow: 0 0 4em 0 rgba(0, 0, 0, .3);
+        border-radius: .5em;
+    }
+}
+
+.dark-searchpage {
+    max-width: 100vw;
+    min-height: 40vh;
+    padding: .5em;
+    background-color: #313F4C;
+    color: #FFF;
+    box-shadow: 0 0 4em 0 rgba(0, 0, 0, .3);
+}
+
+.dark-searchpage h2 {
+    font-size: 1.25rem;
+}
+
+.dark-searchpage h4 {
+    text-align: left;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 30rem) {
+
+    .dark-searchpage h2 {
+        font-size: 1.5rem;
+    }
+
+    .dark-searchpage h4 {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+
+    .dark-searchpage {
+        margin-left: 17.5%;
+        padding-top: 1.5em;
+        min-height: 50vh;
+        width: 65%;
+        box-shadow: 0 0 4em 0 rgba(0, 0, 0, .3);
+        border-radius: .5em;
+    }
+}
+
+.light {
+    margin: 2em auto;
+    width: 100vw;
+    padding: 1.5em;
+    background-color: #FFF;
+    color: #313F4C;
+    box-shadow: 0 0 4em 0 rgba(0, 0, 0, .3);
+}
+
+@media screen and (min-width: 60rem) {
+    .light {
+        align-content: center;
+        width: 25%;
+        float: left;
+        background-color: #FFF;
+        color: #313F4C;
+        box-shadow: 0 0 4em 0 rgba(0, 0, 0, .3);
+        border-radius: .5em;
+    }
+}
+
+.dark h2 {
+    padding-bottom: 1em;
+    text-transform: uppercase;
+    border-bottom: .05em solid #FFF;
+    text-align: center;
+}
+
+
+
+/* image crop for profile picture
+==============================*/
+
+.image-cropper {
+    object-fit: cover;
+    width: 120px;
+    height: 120px;
+    margin: 0 1em 1em 0;
+    /*clip-path: circle(60px at center);*/
+}
+
+/* hr invisible
+==============================*/
+
+hr {
+    background: none;
+    clear: both;
+    float: none;
+    width: 100%;
+    height: 1px;
+    border: none;
+    margin: 20px 0;
+}
+
+/* Search Table CSS
+==============================*/
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    background-color: rgba(238, 238, 238, 0.38);
+}
+
+tr.hover:hover {
+    background-color: #ccc;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: .1em .25em;
+}
+
+td {
+    padding: .75em .3em;
+    border-bottom: 1px solid #FFF;
+}
+
+@media screen and (min-width: 60rem) {
+
+    th {
+        padding: 10px 15px;
+    }
+
+    td {
+        padding: 5px 10px;
+    }
+
+}
+
+td:hover {
+    cursor: pointer;
+}
+
+.tutorsess {
+    text-align: left;
+    color: #FFF;
+    font-size: .65rem;
+    font-family: inherit;
+    width: 100%;
+}
+
+@media screen and (min-width: 30rem) {
+    .tutorsess {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 60rem) {
+    .tutorsess {
+        font-size: 1.25rem;
+    }
+}
+
+/* services
+==============================*/
+
+.services {
+    background-color: #f39d1a;
+    padding: .5em;
+    color: #313F4C;
+    font-size: .8em;
+}
+
+/* footer
+==============================*/
+
+footer {
+    background: #313F4C;
+    padding: 5em 0 2em;
+    color: #FFF;
+}
+
+/* User profile
+==============================*/
+
+.userprofile {
+    font-size: .75em;
+    width: 50%;
+    float: left;
+    text-align: left;
+}
